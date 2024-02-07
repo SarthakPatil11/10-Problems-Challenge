@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Parameter">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="Command">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="1" minOccurs="1" name="StartRange">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="['&quot;\dE]*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element maxOccurs="1" minOccurs="1" name="EndRange">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="['&quot;\dE]*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element maxOccurs="1" minOccurs="1" name="CommandName">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1" />
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element maxOccurs="1" minOccurs="1" name="SearchString">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element maxOccurs="1" minOccurs="1" name="ReplaceString">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
